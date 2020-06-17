@@ -57,5 +57,4 @@ Using over network can be done, howEver more steps should be explored FOR THE SA
 Example Problem, Share the key. (This is not a step by step, just simple example problem )
 In general Network communication should be initiate over a asymmetrically encrypted connection 
 Which then one could use this connect to share (public key) to transfer the symmetric-key (private key)
-
 */
