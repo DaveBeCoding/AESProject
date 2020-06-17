@@ -20,10 +20,13 @@
 //  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 //  DEALINGS IN THE SOFTWARE.
 
-// ATTENTION! <------------------------------------------------------------
-//This is just a simple project made out of boredom, and the WILL TO LEARN.
+#ifndef AES_EX
+#define AES_EX
 
-#include "AES_EX.cpp"
+#include <iostream>
+#include <cstddef>
+#include <string>
+
 /*
     About the Algorithm:
         AES Encryption is a method for scrambling data.
@@ -35,27 +38,16 @@
         means that the same key is used to Scramble the data 
         and unscramble it.  
 */
-int main(int argc, char const *argv[])
+
+class AES_Example
 {
-    AES_Example object_AES;
-    object_AES.Scrambler();
-    return 0;
-}
+private:
+    std::string user_Message;
 
-/*
-Some generalized PROs vs CONs
-
-PROS OF ALGORITHM
-            *FAST
-            *EFFICIENT FOR LARGE DATA
-        
-CONS OF ALGORITHM
-            * HARD TO TRANSPORT/SHARE KEY*
-        
-Using over network can be done, howEver more steps should be explored FOR THE SAFETY OF YOUR DATA.
-
-Example Problem, Share the key. (This is not a step by step, just simple example problem )
-In general Network communication should be initiate over a asymmetrically encrypted connection 
-Which then one could use this connect to share (public key) to transfer the symmetric-key (private key)
-
-*/
+public:
+    AES_Example(/* args */);
+    ~AES_Example();
+    std::string Set_Message();
+    void Scrambler();
+};
+#endif

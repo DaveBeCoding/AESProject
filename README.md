@@ -1,2 +1,4 @@
 # AESProject
-Take in data that will be processed through the AES algorithm. Then unscamble the data to be read again.
+
+Take in data that will be scrambled through the AES algorithm. Then unscramble the data to be read again using a symmetric key. 
+
